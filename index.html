@@ -82,7 +82,6 @@
     <script>
             var userAgentForApex = navigator.userAgent;
             var ua = userAgentForApex.toLowerCase();
-            //目前不支持iphone非safari浏览器进行h5开户
             if (ua.indexOf('iphone') > -1) {
                 var rSafari = /version\/([\w.]+).*(safari)/;
                 var match = rSafari.exec(ua);
@@ -91,8 +90,8 @@
                     $(".download").hide();
                 }
                 else {
-                    $(".tips").show();
-                    $(".download").hide();
+                    $(".tips").hide();
+                    $(".download").show();
                 }
             }
             else {
