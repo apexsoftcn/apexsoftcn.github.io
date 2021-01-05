@@ -76,18 +76,25 @@
                 <div class="title">ios 企业版应用的证书信任流程概要</div>
                 <p>到 设置 -> 通用 -> 设备管理 点击信任应用 完成，回到应用页进入即可</p>
             </div>
+            
+         </div>
+         <div class="device" style="text-align:center;margin-top: 50px">
+                <p>请使用 iPad 安装应用</p>
          </div>
     </div>
     <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
     <script>
         $(".tips").hide();
         $(".download").hide();
+        $(".device").hide();
         if(navigator.userAgent.indexOf("QQ/")> -1 || navigator.userAgent.indexOf("MicroMessenger") > -1){
             $(".tips").show();
             $(".download").hide();
         }else if(navigator.userAgent.indexOf("iphone") > -1){
             $(".tips").hide();
             $(".download").show();
+        }else {
+            $(".device").show();
         }
     </script>
 </html>
