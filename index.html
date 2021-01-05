@@ -80,23 +80,12 @@
     </div>
     <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
     <script>
-            var userAgentForApex = navigator.userAgent;
-            var ua = userAgentForApex.toLowerCase();
-            if (ua.indexOf('iphone') > -1) {
-                var rSafari = /version\/([\w.]+).*(safari)/;
-                var match = rSafari.exec(ua);
-                if (match == null) {
-                    $(".tips").show();
-                    $(".download").hide();
-                }
-                else {
-                    $(".tips").hide();
-                    $(".download").show();
-                }
-            }
-            else {
-                $(".tips").show();
-                $(".download").hide();
-            }
+        if(navigator.userAgent.indexOf("QQ/")> -1 || navigator.userAgent.indexOf("MicroMessenger") > -1){
+            $(".tips").show();
+            $(".download").hide();
+        }else if(navigator.userAgent.indexOf("iphone") > -1){
+            $(".tips").hide();
+            $(".download").show();
+        }
     </script>
 </html>
